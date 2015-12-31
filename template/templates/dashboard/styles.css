@@ -36,7 +36,7 @@ html, body {
 }
 /* iOS Safari specific workaround */
 .demo-drawer .mdl-menu__container {
-  z-index: -1;
+  z-index: 1000;
 }
 .demo-drawer .demo-navigation {
   z-index: -2;

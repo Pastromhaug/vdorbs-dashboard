@@ -36,6 +36,8 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    <!-- <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
 
     <link rel="shortcut icon" href="template/templates/dashboard/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
@@ -98,6 +100,13 @@
             <aside id="sidebar" class="sidebar sidebar-default open" role="navigation" style="width:100%">
                 <!-- Sidebar navigation -->
                 <ul class="nav sidebar-nav">
+                    <li class="dropdown" style="background-color:rgb(245,245,245)" onclick="showwholegraph()">
+                        <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">All Subjects<b class="caret" style></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" tabindex="-1">Social<span class="sidebar-badge">12</span></a></li>
+                            <li><a href="#" tabindex="-1">Promo<span class="sidebar-badge">0</span></a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown" style="background-color:#1f77b4" onclick="filtersubject('1')">
                         <a class="ripple-effect dropdown-toggle" href="#" data-toggle="dropdown">Civil and Environmental Engineering<b class="caret" style></b></a>
                         <ul class="dropdown-menu">
@@ -255,7 +264,7 @@
     <script>
         $('#graphsvg').height($(window).height() - $("#header").height() - 16);
     </script>
-    <script src="./js/jquery-mobile-just-touch.js"></script>
+    <!-- <script src="./js/jquery-mobile-just-touch.js"></script> -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8" type="text/javascript"></script>
     <script src="http://marvl.infotech.monash.edu/webcola/cola.v3.min.js"></script>
     <script src="./js/graph.js"></script>
