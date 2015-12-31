@@ -1,0 +1,87 @@
+* {box-sizing: border-box;}
+
+.sidebar-wrapper {
+    max-width:225px;
+}
+
+.dropdown{
+    position: relative;
+    padding: 0;
+    background-color: orange;
+    list-style: none;
+    margin: 0;
+
+}
+
+.dropdown .lvl1 {
+    background-color: blue;
+}
+
+.item {
+    margin: 0;
+}
+
+.mybuttontext {
+    width: calc(100% - 48px) !important;
+    height: 48px !important;
+    line-height: 48px;
+    padding: 0;
+    padding-left: 16px;
+    color: inherit;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    float: left;
+    background-color: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mybutton{
+    width: 48px !important;
+    height: 48px !important;
+    float:right !important;
+    background-color: inherit;
+    font-size: 16px !important;
+    text-decoration: none;
+    padding: 12px;
+    color: inherit !important;
+    text-align: center !important;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.mybuttontext:hover{
+    opacity: 0.75;
+    transition: all .3s;
+}
+
+.mybutton:hover{
+    opacity: 0.75;
+    transition: all .3s;
+}
+
+.mybuttontext:active{
+    opacity:.60;
+}
+
+.mybutton:active{
+    opacity:.60;
+}
+
+.myicon{
+    font-size: 24px !important;
+
+}
+.eh{
+
+}
+
