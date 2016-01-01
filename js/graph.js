@@ -38,7 +38,7 @@ svg
 //s3graph('Subjects/Electrical Engineering and Computer Science');
 s3graph('wholegraph');
 function s3graph(graphname){
-    var params = {Bucket: 'vdorbslessons',  Key: 'Graphs/'+graphname};
+    var params = {Bucket: 'vdorbs-development',  Key: 'Graphs/'+graphname};
     var url = s3.getSignedUrl('getObject', params);
     $.getJSON(url,function(res){
         drawgraph(res.nodes, res.links);
