@@ -38,6 +38,7 @@
     cursor: pointer;
     white-space: nowrap;
     float: left;
+    color:black !important;
     background-color: inherit;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -62,6 +63,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color:black !important;
 
     -webkit-transition:height, 0.5s linear;
     -moz-transition: height, 0.5s linear;
