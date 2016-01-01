@@ -15,6 +15,10 @@
 
 .dropdown .lvl1 {
     background-color: blue;
+    display:none;
+    -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .item {
@@ -39,6 +43,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+
 }
 
 .mybutton{
@@ -57,6 +63,18 @@
     -ms-user-select: none;
     user-select: none;
 
+    -webkit-transition:height, 0.5s linear;
+    -moz-transition: height, 0.5s linear;
+    -ms-transition: height, 0.5s linear;
+    -o-transition: height, 0.5s linear;
+    transition: height, 0.5s linear;
+}
+
+.open{
+    display:inline !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .mybuttontext:hover{
@@ -77,11 +95,8 @@
     opacity:.60;
 }
 
-.myicon{
+.myicon {
     font-size: 24px !important;
-
 }
-.eh{
 
-}
 

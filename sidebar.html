@@ -20,34 +20,137 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sidebar.css">
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
 </head>
 <body>
-    <div class = sidebar-wrapper>
+    <div class="sidebar-wrapper">
         <ul class="dropdown">
-            <li class="item" style="background-color: pink">
-                <a class="mybuttontext">All Subjects</a>
+            <li class="item parent" style="background-color:rgb(245,245,245)">
+                <a class="mybuttontext" onclick="showwholegraph()">All Subjects</a>
                 <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
                 <ul class="dropdown lvl1">
-                    <li class="item" style="background-color: green">
+                    <li class="item" style="background-color:rgb(245,245,245)">
                         <a class="mybuttontext">one sometimes I don't want to have to</a>
                         <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
                     </li>
-                    <li class="item" style="background-color: blue">
+                    <li class="item" style="background-color:rgb(245,245,245)">
                         <a class="mybuttontext">two</a>
                         <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
                     </li>
-                    <li class="item" style="background-color: orange">
+                    <li class="item" style="background-color:rgb(245,245,245)">
                         <a class="mybuttontext">threeee</a>
                         <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
                     </li>
                 </ul>
             </li>
+            <li class="item parent" style="background-color:#1f77b4">
+                <a class="mybuttontext" onclick="filtersubject('1')">Civil and Environmental Engineering</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                <ul class="dropdown lvl1">
+                    <li class="item" style="background-color:rgb(245,245,245)">
+                        <a class="mybuttontext">one sometimes I don't want to have to</a>
+                        <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                        <ul class="dropdown lvl1">
+                            <li class="item" style="background-color:rgb(245,245,245)">
+                                <a class="mybuttontext">one sometimes I don't want to have to</a>
+                                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                            </li>
+                            <li class="item" style="background-color:rgb(245,245,245)">
+                                <a class="mybuttontext">two</a>
+                                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                            </li>
+                            <li class="item" style="background-color:rgb(245,245,245)">
+                                <a class="mybuttontext">threeee</a>
+                                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item" style="background-color:rgb(245,245,245)">
+                        <a class="mybuttontext">two</a>
+                        <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                    </li>
+                    <li class="item" style="background-color:rgb(245,245,245)">
+                        <a class="mybuttontext">threeee</a>
+                        <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item parent" style="background-color:#aec7e8">
+                <a class="mybuttontext" onclick="filtersubject('2')">Mechanical Engineering</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#ff7f0e">
+                <a class="mybuttontext" onclick="filtersubject('3')">Materials Science and Engineering</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#ffbb78">
+                <a class="mybuttontext" onclick="filtersubject('4')">Architecture</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#2ca02c">
+                <a class="mybuttontext" onclick="filtersubject('5')">Chemistry</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#98df8a">
+                <a class="mybuttontext" onclick="filtersubject('6')">Electrical Engineering and Computer Science</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#d62728">
+                <a class="mybuttontext" onclick="filtersubject('7')">Biology</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#ff9896">
+                <a class="mybuttontext" onclick="filtersubject('8')">Physics</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#9467bd">
+                <a class="mybuttontext" onclick="filtersubject('9')">Brain and Cognitive Sciences</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#c5b0d5">
+                <a class="mybuttontext" onclick="filtersubject('10')">Chemical Engineering</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#8c564b">
+                <a class="mybuttontext" onclick="filtersubject('11')">Urban Studies and Planning</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#c49c94">
+                <a class="mybuttontext" onclick="filtersubject('12')">Earth, Atmospheric, and Planetary Sciences</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#f7b6d2">
+                <a class="mybuttontext" onclick="filtersubject('14')">Economics</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#7f7f7f">
+                <a class="mybuttontext" onclick="filtersubject('15')">Management</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#c7c7c7">
+                <a class="mybuttontext" onclick="filtersubject('16')">Aeronautics and Astronautics</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#bcbd22">
+                <a class="mybuttontext" onclick="filtersubject('17')">Political Science</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#dbdb8d">
+                <a class="mybuttontext" onclick="filtersubject('18')">Mathematics</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
+            <li class="item parent" style="background-color:#9edae5">
+                <a class="mybuttontext" onclick="filtersubject('20')">Biological Engineering</a>
+                <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
+            </li>
         </ul>
     </div>
+    <script src="./js/sidebar.js"> </script>
 </body>
 </html>
