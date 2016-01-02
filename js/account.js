@@ -9,6 +9,13 @@ function onSignIn(googleUser) {
     $('#signinbtn').css('display','none');
     $('#namefield').text(profile.getName()).css('display','inline');
     $('#signout').css('display','block');
+
+    $.post("http://localhost:8000/login",{id_token: googleUser.getAuthResponse().id_token}, function(data){
+        console.log(data);
+    });
+
+
+    //makeLogInRequest(googleUser.getAuthResponse().id_token);
 }
 
 function signOut() {
