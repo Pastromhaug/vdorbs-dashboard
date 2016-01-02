@@ -87,11 +87,14 @@
                 <div id= "signinbtn" class="g-signin2" data-onsuccess="onSignIn"></div>
                 <span id="namefield" style="display:none"></span>
                 <div class="mdl-layout-spacer"></div>
-                <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons" role="presentation">arrow_drop_down</i>
-                    <span class="visuallyhidden">Accounts</span>
+
+                <button id="demo-menu-lower-right"
+                        class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
                 </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                    for="demo-menu-lower-right">
                     <li id="signout" class="mdl-menu__item signout" onclick="signOut()" style="display:none">sign out</li>
                     <li class="mdl-menu__item">integrate Facebook</li>
                     <li class="mdl-menu__item">integrate LinkedIn</li>
