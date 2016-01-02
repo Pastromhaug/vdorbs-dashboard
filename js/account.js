@@ -8,4 +8,16 @@ function onSignIn(googleUser) {
     $('#profimg').attr('src', profile.getImageUrl());
     $('#signinbtn').css('display','none');
     $('#namefield').text(profile.getName()).css('display','inline');
+    $('#signout').css('display','block');
+}
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        console.log('User signed out.');
+    });
+    $('#profimg').attr('src', '../template/templates/dashboard/images/user.jpg');
+    $('#signinbtn').css('display','inline');
+    $('#namefield').css('display','none');
+    $('#signout').css('display','none');
 }
