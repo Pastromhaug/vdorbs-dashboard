@@ -1,4 +1,4 @@
-AWS.config.update({accessKeyId: 'AKIAJFKCAKC5DOCNOZAQ', secretAccessKey: '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'});
+AWS.config.update({});
 AWS.config.region = 'us-east-1';
 var s3 = new AWS.S3();
 
