@@ -1,7 +1,3 @@
-AWS.config.update({});
-AWS.config.region = 'us-east-1';
-var s3 = new AWS.S3();
-
 var color = d3.scale.category20();        // Array of colors
 for (var i = 1; i < 21; i++){
     console.log(color(i));
@@ -38,8 +34,7 @@ svg
 //s3graph('Subjects/Electrical Engineering and Computer Science');
 s3graph('wholegraph');
 function s3graph(graphname){
-    var params = {Bucket: 'vdorbs-development',  Key: 'Graphs/'+graphname};
-    var url = s3.getSignedUrl('getObject', params);
+    var url = "https://s3.amazonaws.com/vdorbs-development/Graphs/" + graphname;
     $.getJSON(url,function(res){
         drawgraph(res.nodes, res.links);
     });
