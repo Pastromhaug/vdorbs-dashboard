@@ -24,6 +24,10 @@ app.post('/login', function(req, res){
     res.end(id_token);
 });
 
+app.get('/course*', function(req, res) {
+   res.sendFile(__dirname + '/' + 'course.html');
+});
+
 console.log(config.serverPort);
 var server = app.listen(config.serverPort, function() {              // Run server
 });
