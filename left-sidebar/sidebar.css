@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 
 .sidebar-wrapper {
-    max-width:225px;
+    max-width:100%;
 }
 
 .dropdown{
