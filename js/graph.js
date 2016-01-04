@@ -63,8 +63,10 @@ function drawgraph(nodedata,links) {
         .attr("class", "node")                   // Add node class to groups
         .on("mouseover", show_name)             // Callbacks on events
         .on("mouseout", hide_name)
-        .on("dblclick", filtercourse)
+        .on("dblclick", getContent)//gotocourse)//filtercourse)
         .call(force.drag);                      // Enable graph dragging
+
+
 
     var keys = nodedata.map(function (d) {
         return d.name
@@ -105,7 +107,9 @@ function drawgraph(nodedata,links) {
     });
 }
 
-
+function gotocourse(){
+    window.location.href = "http://localhost:8000/course";
+}
 
 function zoom() {
     svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");

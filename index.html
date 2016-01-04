@@ -55,7 +55,7 @@
 
 </head>
 <body>
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+<div id="bodydiv" class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header id="header" class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div id="headerrow" class="mdl-layout__header-row">
             <span class="mdl-layout-title">Home</span>
@@ -79,7 +79,7 @@
             </ul>
         </div>
     </header>
-    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <div id = "drawer" class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
             <img id="profimg" src="template/templates/dashboard/images/user.jpg" class="demo-avatar" style="margin:16px">
             <div class="demo-avatar-dropdown">
@@ -102,7 +102,7 @@
             </div>
         </header>
 
-        <div class="sidebar-wrapper">
+        <div id = "graphsidebarwrapper" class="sidebar-wrapper">
             <ul class="dropdown">
                 <li class="item parent" style="background-color:rgb(245,245,245)">
                     <a class="mybuttontext" onclick="showwholegraph()">All Subjects</a>
@@ -123,7 +123,7 @@
                     </ul>
                 </li>
                 <li class="item parent" style="background-color:#1f77b4">
-                    <a class="mybuttontext" onclick="filtersubject('1')">Civil and Environmental Engineering</a>
+                    <a href="#civil-and-environmental-engineering" class="mybuttontext" onclick="filtersubject('1')">Civil and Environmental Engineering</a>
                     <a class="mybutton"><i class="material-icons myicon">arrow_drop_down</i></a>
                     <ul class="dropdown lvl1">
                         <li class="item" style="background-color:rgb(245,245,245)">
@@ -225,7 +225,7 @@
             </ul>
         </div>
 
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <nav id = "graphsidebarnav" class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
@@ -238,11 +238,89 @@
             <div class="mdl-layout-spacer"></div>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
+        <nav id = "contentsidebarnav" class="demo-navigation mdl-navigation mdl-color--blue-grey-800" style="display:none">
+            <a class="mdl-navigation__link" href="">Lecture 1</a>
+            <a class="mdl-navigation__link" href="">Lecture 2</a>
+            <a class="mdl-navigation__link" href="">Lecture 3</a>
+            <a class="mdl-navigation__link" href="">Lecture 4</a>
+            <a class="mdl-navigation__link" href="">Lecture 5</a>
+            <a class="mdl-navigation__link" href="">Lecture 6</a>
+            <a class="mdl-navigation__link" href="">Lecture 7</a>
+            <a class="mdl-navigation__link" href="">Lecture 8</a>
+            <a class="mdl-navigation__link" href="">Lecture 9</a>
+            <div class="mdl-layout-spacer"></div>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
     </div>
-    <main id="graphmdl" class="mdl-layout__content mdl-color--grey-100">
+    <main id="main" class="mdl-layout__content mdl-color--grey-100">
         <div id="graphgrid" class="mdl-grid demo-content " style="max-width:none; padding:8px">
             <div  id="graphbox" class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid" style="padding:0">
                 <svg id="graphsvg" fill="currentColor" class="demo-chart"></svg>
+            </div>
+        </div>
+        <div id="contentgrid" class="mdl-grid demo-content" style="display:none">
+            <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                <div class="mdl-cell" style="min-width: fit-content;">
+                    <img id="courseimage" src="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-838-algorithms-for-computer-animation-fall-2002/6-838f02.jpg">
+                </div>
+                <div id="courseDescription" class="mdl-cell mdl-cell--stretch" style="flex-grow:1">
+                    <h3 id="coursename">Graphics</h3>
+                    <h4>Course Description</h4>
+                    <p id="coursedescription" style="display:inline">Animation is a compelling and effective form of expression; it engages viewers and makes difficult concepts easier to grasp. Today's animation industry creates films, special effects, and games with stunning visual detail and quality. This graduate class will investigate the algorithms that make these animations possible: keyframing, inverse kinematics, physical simulation, optimization, optimal control, motion capture, and data-driven methods. Our study will also reveal the shortcomings of these sophisticated tools. The students will propose improvements and explore new methods for computer animation in semester-long research projects. The course should appeal to both students with general interest in computer graphics and students interested in new applications of machine learning, robotics, biomechanics, physics, applied mathematics and scientific computing.</p>
+                </div>
+            </div>
+            <div id="coursesyllabus" class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+                <div id="course_inner_section"> <h2 class="subhead">Course Meeting Times</h2> <p>Lectures: 2 sessions / week, 1.5 hours / session</p> <h2 class="subhead">Course Goals</h2> <p>This graduate course introduces students to open problems in computer animation, teaches essential techniques for solving these problems, and enables students to explore these and other techniques in a semester-long research project.</p> <h2 class="subhead">Prerequisites</h2> <p>Programming experience and mathematical sophistication are essential for this course. Successful completion of an introductory computer graphics course such as 6.837 is required. A student who does not have the prerequisites should obtain the permission of the instructor.</p> <h2 class="subhead">Required Work</h2> <p>One reading assignment each week and a semester-long research project. The project will require three written reports: extended abstract of proposed work, a short progress report, and a final conference-style report.</p> <h2 class="subhead">Grading</h2> <p>20% Reading assignments and participation</p> <p>20% Extended abstract</p> <p>30% Progress report</p> <p>30% Final report</p> <p>The grades for the research project and corresponding written reports will depend on clarity of reports, technical contributions, and creativity of ideas</p> <h2 class="subhead">Appropriate Conduct</h2> <p>All students must complete reading assignments on their own.</p> <p>A research project is to be tackled by a team of two students. Permission to work individually may be granted, but only in special circumstances. A team can collaborate extensively to ensure a timely project completion.</p> <p>The following excerpts from &quot;The Mayfield Handbook of Technical and Scientific Writing&quot; describe the guidelines for appropriate academic conduct:</p> <blockquote> <h3 class="subsubhead">Legal and Ethical Issues</h3> <p>Research in science and engineering, as in most professions, sometimes poses unexpected legal and ethical problems. These problems will often become apparent at the writing stage of a project. When written claims are made, the concreteness and technical quality of many statements can mask limitations and inconsistencies, thus posing potential legal and ethical problems. Here are some things to keep in mind:</p> <ul> <li>The expert uses his or her specialized knowledge to solve a problem. Hence, the expert assumes an authority and uses a language that the lay person is usually not able to judge. Some sources of liability include a failure to point out alternatives, failure to note negative secondary effects, failure to give the whole picture, failure to acknowledge gaps in logic, and failure to cite or credit sources.</li> <li>Be aware of potential sources of plagiarism. Be sure you understand what plagiarism is. It is the copying, whether deliberate or unintentional, of ideas or portions of text without citing the sources for credit. It is also the use of other people's ideas without attributing them to the proper source. Although plagiarism is often unintentional, it still demonstrates incompetence. If you fail to record your sources and then later forget that you used a source, you are still liable and open to the charge of theft of intellectual property</li> </ul> <h3 class="subsubhead">Citing Sources and Listing References</h3> <p>Whenever you include another person's information or wording in a document, you must acknowledge the source and include a citation that will tell the reader where you obtained it. If you do not do so, you deprive your reader of the ability to locate information that he or she might want to explore further. In addition, you may be committing intellectual theft, plagiarism.</p> <p>Mechanisms that allow a reader to verify the information presented in a document are essential parts of most types of technical and scientific writing. Procedures sections of technical and laboratory reports, for example, provide the reader with information sufficient to replicate both the method and the data described in the document.</p> <p>There are two basic and universal rules regarding the use of information in professional and, especially, academic writing:</p> <ul> <li>If you use the language of your source, you must quote it exactly, enclose it in quotation marks, and cite the source.</li> <li>If you use ideas or information that are not common knowledge, you must cite the source.</li> </ul> </blockquote> <div class="help slide-bottom"> <div class="help-message"> <a class="help-engage" href="javascript: trackEvents('Bottom Get Started','bottom get started Click','Help Overlay');">Need help getting started?</a> <a href="javascript:disableHelpPopup(); trackEvents('Bottom Don\'t Show','bottom don\'t show Click','Help Overlay');" class="help-dismiss">Don't show me this again</a> </div> </div> <div class="help popup-center"> <div class="help-message"> <p class="help-dismiss"><a href="javascript:disableHelpPopup(); trackEvents('Popup Don\'t Show','popup don\'t show Click','Help Overlay');">Don't show me this again</a></p> <h2>Welcome!</h2> <p>This is one of over 2,200 courses on OCW. Find materials for this course in the pages linked along the left. </p> <p><strong>MIT OpenCourseWare</strong> is a free &amp; open publication of material from thousands of MIT courses, covering the entire MIT curriculum.</p> <p><strong>No enrollment or registration.</strong> Freely browse and use OCW materials at your own pace. There's no signup, and no start or end dates.</p> <p><strong>Knowledge is your reward.</strong> Use OCW to guide your own life-long learning, or to teach others. We don't offer credit or certification for using OCW.</p> <p><strong>Made for sharing</strong>. Download files for later. Send to friends and colleagues. Modify, remix, and reuse (just remember to cite OCW as the source.)</p> <p class="help-engage">Learn more at <a href="http://ocw.mit.edu/help/get-started-with-ocw/" onclick="trackEvents('Popup Get Started','popup get started Click','Help Overlay');">Get Started with MIT OpenCourseWare</a></p> </div> </div> </div>
+            </div>
+            <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+                <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+                    <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+                        <h2 class="mdl-card__title-text">Updates</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                        Non dolore elit adipisicing ea reprehenderit consectetur culpa.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+                    </div>
+                </div>
+                <div class="demo-separator mdl-cell--1-col"></div>
+                <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+                    <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+                        <h3>View options</h3>
+                        <ul>
+                            <li>
+                                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Click per object</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Views per object</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Objects selected</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Objects viewed</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">Change location</a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">location_on</i>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -256,6 +334,7 @@
 <!-- <script src="./js/jquery-mobile-just-touch.js"></script> -->
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8" type="text/javascript"></script>
 <script src="http://marvl.infotech.monash.edu/webcola/cola.v3.min.js"></script>
+<script src="content/content.js"></script>
 <script src="./js/graph.js"></script>
 </body>
 </html>
