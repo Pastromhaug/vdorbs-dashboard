@@ -11,7 +11,7 @@ var force = cola.d3adaptor()
 
 var edges,nodes,svg;
 
-svg = d3.select("svg")                // d3 svg container selector
+svg = d3.select("#graphsvg")                // d3 svg container selector
     .call(d3.behavior.zoom().scaleExtent([0.25, 10]).on("zoom", zoom))
     .append("g")
     .attr("w", svgwidth)
