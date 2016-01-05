@@ -14,4 +14,16 @@ getContent = function(){
     $('#graphgrid').css('display','none');
     $('#contentsidebarnav').css('display','block');
     $('#contentgrid').css('display','block');
+    $('#home').css('display','none');
+    $('#backbutton').css('display','inline');
+};
+
+getGraph = function(){
+    $('#graphsidebarwrapper').css('display','block');
+    $('#graphsidebarnav').css('display','block');
+    $('#graphgrid').css('display','block');
+    $('#contentsidebarnav').css('display','none');
+    $('#contentgrid').css('display','none');
+    $('#home').css('display','inline');
+    $('#backbutton').css('display','none');
 };
