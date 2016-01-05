@@ -1,6 +1,7 @@
 getContent = function(){
     console.log("content");
-    var url = "https://s3.amazonaws.com/vdorbs-development/MitContent/" + $(this).find("text").text();
+    var courseName = $(this).find("text").text();
+    var url = "https://s3.amazonaws.com/vdorbs-development/MitContent/" + courseName;
     $.getJSON(url,function(res){
         console.log(res);
         $('#coursesyllabus').html(res['syllabus']);
@@ -14,7 +15,7 @@ getContent = function(){
     $('#graphgrid').css('display','none');
     $('#contentsidebarnav').css('display','block');
     $('#contentgrid').css('display','block');
-    $('#home').css('display','none');
+    $('#home').text(courseName);
     $('#backbutton').css('display','inline');
 };
 
@@ -24,6 +25,6 @@ getGraph = function(){
     $('#graphgrid').css('display','block');
     $('#contentsidebarnav').css('display','none');
     $('#contentgrid').css('display','none');
-    $('#home').css('display','inline');
+    $('#home').text('Home');
     $('#backbutton').css('display','none');
 };
