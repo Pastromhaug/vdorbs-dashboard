@@ -1,6 +1,8 @@
-var color = d3.scale.category20();        // Array of colors
+var color = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c',  '#98df8a',  '#d62728',  '#ff9896',
+    '#9467bd',  '#c5b0d5',  '#8c564b',  '#c49c94',  '#e377c2',  '#f7b6d2',  '#7f7f7f',  '#c7c7c7',  '#bcbd22',
+    '#dbdb8d',  '#17becf',  '#9edae5'];        // Array of colors
 for (var i = 1; i < 21; i++){
-    console.log(color(i));
+    console.log(color[i]);
 }
 var svgheight = $("#graphsvg").height();  // Set svg container height
 var svgwidth = $("#graphsvg").width();    // Set svg container width
@@ -75,10 +77,10 @@ function drawgraph(nodedata,links) {
     nodes
         .append("circle")                       // Append circle to node group
         .attr("stroke", function (d) {
-            return color(parseInt(nodedata[keys.indexOf(d.name)].coursenum.split('.')[0]))
+            return color[parseInt(nodedata[keys.indexOf(d.name)].coursenum.split('.')[0]) - 1]
         })
         .attr("fill", function (d) {
-            return color(parseInt(nodedata[keys.indexOf(d.name)].coursenum.split('.')[0]))
+            return color[parseInt(nodedata[keys.indexOf(d.name)].coursenum.split('.')[0]) - 1]
         })
         .attr("r", function(d) {
             return calcRadius(d);
