@@ -34,7 +34,7 @@ svg
     .attr("d", "M0,0 L0,8 L10,4");          // from (0, 0) to (0, 8) to (10, 4)
 
 //s3graph('Subjects/Electrical Engineering and Computer Science');
-s3graph('wholegraph');
+//s3graph('wholegraph');
 function s3graph(graphname){
     var url = "https://s3.amazonaws.com/vdorbs-development/Graphs/" + graphname;
     $.getJSON(url,function(res){
@@ -107,10 +107,6 @@ function drawgraph(nodedata,links) {
         nodes                                   // Draw node at (x, y) coords
             .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"});
     });
-}
-
-function gotocourse(){
-    window.location.href = "http://localhost:8000/course";
 }
 
 function zoom() {
